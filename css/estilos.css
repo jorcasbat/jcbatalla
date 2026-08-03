@@ -101,32 +101,29 @@ header{
 }
 
 .navbar .container{
-    max-width: 1800px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:nowrap;
+}
 
+.navbar-toggler{
+    margin-left:auto;
+    border:none;
+    padding:.25rem .5rem;
 }
 
 .navbar-brand{
-    display:flex;
-    align-items:center;
-    gap:22px;
+    flex-shrink:1;
+    min-width:0;
+}
 
-    font-family:"Cormorant Garamond", serif;
-
-    text-decoration:none;
-
-    margin-left:0px;   /* mueve el logo un poco a la izquierda */
+.logo{
+    height:46px;
 }
 
 .brand-name{
-
-    color:white;
-
-    font-size:2.2rem;
-
-    font-weight:500;
-
-    letter-spacing:2px;
-
+    font-size:1.35rem;
 }
 
 .brand-divider{
