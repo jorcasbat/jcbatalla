@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autor | J. C. Batalla</title>
+<link rel="stylesheet" href="css/autor.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+<section class="hero">
+
+    
+
+    <div class="titulo">
+        <h1>J. C. BATALLA</h1>
+    </div>
+
+    <div class="tarjetas">
+
+        <!-- TARJETAS IZQUIERDA -->
+
+        <div class="lado izquierdo">
+
+            ...
+            <!-- Tus tarjetas -->
+            ...
+
+        </div>
+
+        <!-- TARJETAS DERECHA -->
+
+        <div class="lado derecho">
+
+            ...
+            <!-- Tus tarjetas -->
+            ...
+
+        </div>
+
+    </div>
+
+    <!-- FRASE INFERIOR -->
+
+    <div class="autor-cita">
+
+    <div class="autor-linea"></div>
+
+    <span class="autor-rol">
+        PROFESOR · ESCRITOR · PADRE
+    </span>
+
+    <h2>
+        La Historia no es el escenario de mis novelas.<br>
+        Es su protagonista.
+    </h2>
+
+    <p>
+    «Cada documento olvidado, cada viaje y cada piedra
+    esconden una historia esperando ser contada.»
+</p>
+
+</div>
+
+</section>
+
+<script>
+lucide.createIcons();
+</script>
+
+<canvas id="dust"></canvas>
+<script>
+
+const canvas=document.getElementById("dust");
+const ctx=canvas.getContext("2d");
+
+let particles=[];
+
+function resize(){
+
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+
+}
+
+resize();
+
+window.addEventListener("resize",resize);
+
+for(let i=0;i<28;i++){
+
+    particles.push({
+
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+
+        r:Math.random()*2+0.5,
+
+        vx:(Math.random()-0.5)*0.08,
+        vy:-Math.random()*0.12-0.02,
+
+        a:Math.random()*0.35+0.05
+
+    });
+
+}
+
+function draw(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach(p=>{
+
+        p.x+=p.vx;
+        p.y+=p.vy;
+
+        if(p.y<-10){
+
+            p.y=canvas.height+10;
+            p.x=Math.random()*canvas.width;
+
+        }
+
+        if(p.x<0)p.x=canvas.width;
+        if(p.x>canvas.width)p.x=0;
+
+        ctx.beginPath();
+
+        ctx.fillStyle=`rgba(215,177,107,${p.a})`;
+
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+
+        ctx.fill();
+
+    });
+
+    requestAnimationFrame(draw);
+
+}
+
+draw();
+
+</script>
+</body>
+</html>
+
+    <div class="tarjetas">
+
+        <!-- IZQUIERDA -->
+        <div class="lado izquierdo">
+
+            <a class="card" href="https://jorcasbat3.wixsite.com/batalla-1/soy" target="_blank" rel="noopener noreferrer">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="user-round"></i>
+                    </div>
+                    <h3>Quién soy</h3>
+                </div>
+                <p>
+                    Profesor. Escritor. Padre.<br>
+                    La historia de cómo la pasión por el pasado terminó convirtiéndose en novelas.
+                </p>
+            </a>
+
+            <a class="card" href="https://jorcasbat3.wixsite.com/batalla-1/inspiran" target="_blank" rel="noopener noreferrer">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3>Me inspiran</h3>
+                </div>
+                <p>
+                    Historia, arte y lugares reales.<br>
+                    Los autores, los viajes y las preguntas que alimentan cada página.
+                </p>
+            </a>
+
+            <a class="card" href="https://jorcasbat3.wixsite.com/batalla-1/escribo" target="_blank" rel="noopener noreferrer">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="pen-tool"></i>
+                    </div>
+                    <h3>Escribo</h3>
+                </div>
+                <p>
+                    Thrillers históricos con alma.<br>
+                    Misterio, emoción y personajes marcados por el peso de la historia.
+                </p>
+            </a>
+
+            <a class="card" href="https://jorcasbat3.wixsite.com/batalla-1/noticias" target="_blank" rel="noopener noreferrer">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="newspaper"></i>
+                    </div>
+                    <h3>Noticias</h3>
+                </div>
+                <p>
+                    Presentaciones y novedades.<br>
+                    Descubre los próximos eventos, firmas y nuevos proyectos.
+                </p>
+            </a>
+
+        </div>
+
+        <!-- DERECHA -->
+        <div class="lado derecho">
+
+            <a class="card" href="https://jorcasbat3.wixsite.com/batalla-1/investigo" target="_blank" rel="noopener noreferrer">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="search"></i>
+                    </div>
+                    <h3>Investigo</h3>
+                </div>
+                <p>
+                    La ficción nace de la realidad.<br>
+                    Archivos, documentos y escenarios donde comienza cada historia.
+                </p>
+            </a>
+
+            <a class="card" href="https://jorcasbat3.wixsite.com/batalla-1/viajo" target="_blank" rel="noopener noreferrer">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="compass"></i>
+                    </div>
+                    <h3>Viajo</h3>
+                </div>
+                <p>
+                    Cada lugar cuenta una historia.<br>
+                    Francia, Italia, Egipto y Turquía inspiran muchas de mis novelas.
+                </p>
+            </a>
+
+            <a class="card" href="https://jorcasbat3.wixsite.com/batalla-1/mientras" target="_blank" rel="noopener noreferrer">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="coffee"></i>
+                    </div>
+                    <h3>Mientras escribo</h3>
+                </div>
+                <p>
+                    Detrás de cada capítulo.<br>
+                    Curiosidades, proceso creativo y el día a día de un escritor.
+                </p>
+            </a>
+
+            <a class="card" href="https://jcbatalla.com/contacto.html" target="_blank" rel="noopener noreferrer">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3>Contacto</h3>
+                </div>
+                <p>
+                    Hablemos.<br>
+                    Escríbeme para colaboraciones, entrevistas o cualquier consulta.
+                </p>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>

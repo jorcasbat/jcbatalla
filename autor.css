@@ -1,0 +1,731 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    width:100%;
+    height:100vh;
+
+    background-image:url("../img/autor.webp");
+
+    background-size:cover;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:45%;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.95),
+        rgba(0,0,0,.55),
+        transparent
+    );
+
+    pointer-events:none;
+}
+
+/* ===========================
+   CAPA OSCURA
+=========================== */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,.18),
+        rgba(0,0,0,.08) 30%,
+        rgba(0,0,0,.28) 70%,
+        rgba(0,0,0,.60)
+    );
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .hero{
+
+        background-position:center top;
+
+    }
+
+}
+/*=========================
+  TÍTULO
+=========================*/
+
+.titulo{
+
+    position:absolute;
+
+    top:55px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    text-align:center;
+
+    z-index:10;
+
+}
+
+.titulo h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:5.2rem;
+
+    font-weight:600;
+
+    letter-spacing:.18em;
+
+    color:#c89a52;
+
+    text-shadow:
+    0 2px 10px rgba(0,0,0,.5);
+
+}
+
+.titulo p{
+
+    margin-top:14px;
+
+    font-family:Arial,sans-serif;
+
+    font-size:.72rem;
+
+    letter-spacing:.45em;
+
+    color:#d9d0c0;
+
+}
+
+@media(max-width:900px){
+
+.titulo{
+
+    top:35px;
+
+}
+
+.titulo h1{
+
+    font-size:3rem;
+
+    letter-spacing:.08em;
+
+}
+
+.titulo p{
+
+    font-size:.62rem;
+
+    letter-spacing:.22em;
+
+}
+
+}/* ==========================
+   TÍTULO
+========================== */
+
+.titulo{
+    position:absolute;
+    top:100px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    z-index:50;
+    width:100%;
+    pointer-events:none;
+}
+
+.titulo h1{
+
+    font-family:"Cormorant Garamond", serif;
+    font-size:5.8rem;
+    font-weight:600;
+    letter-spacing:.22em;
+
+    color:#E1B96A;
+
+    text-shadow:
+0 2px 2px rgba(0,0,0,.95),
+0 8px 30px rgba(0,0,0,.75);
+
+}
+
+.titulo p{
+
+    color:#e7e5df;
+    letter-spacing:.45em;
+    font-size:1.50rem;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.8);
+
+}
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:280px;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.18),
+        transparent
+    );
+
+    z-index:1;
+
+}
+/*=========================================
+  TARJETAS
+=========================================*/
+
+.tarjetas{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:20;
+
+    pointer-events:none;
+
+}
+
+.lado{
+
+    position:absolute;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:22px;
+
+    pointer-events:auto;
+
+}
+
+.lado.izquierdo{
+    left:170px;
+    top:180px;
+}
+
+.lado.derecho{
+    right:170px;
+    top:180px;
+}
+
+
+.card{
+
+    background:linear-gradient(
+        135deg,
+        rgba(42,28,15,.42),
+        rgba(10,10,10,.55)
+    );
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(212,170,92,.22);
+
+}
+
+.card-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:22px;
+}
+
+.card-icon{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border:1px solid rgba(212,170,92,.55);
+    border-radius:50%;
+
+    color:#c89a52;
+
+}
+
+.card-icon svg{
+
+    width:22px;
+    height:22px;
+
+    stroke-width:1.8;
+
+}
+
+.card-title{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.card-title h3{
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:2.1rem;
+    font-weight:600;
+    color:#ecd4a1;
+
+    margin:0;
+
+}
+
+.card-linea{
+
+    width:48px;
+    height:2px;
+
+    margin-top:8px;
+
+    background:#c89a52;
+
+}
+
+.card p{
+
+    font-family:Inter,sans-serif;
+
+    color:#d8d8d8;
+
+    line-height:1.75;
+
+    font-size:1rem;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d8b36d;
+
+    box-shadow:
+        0 0 25px rgba(200,154,82,.18),
+        0 20px 45px rgba(0,0,0,.45);
+
+}
+.card-icon{
+
+    width:64px;
+    height:64px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:24px;
+
+    border:1px solid rgba(212,170,92,.55);
+
+    border-radius:50%;
+
+    color:#d4aa5c;
+
+    background:rgba(212,170,92,.03);
+
+    transition:.35s;
+
+}
+
+.card:hover .card-icon{
+
+    transform:scale(1.08);
+
+    color:#f0cf8a;
+
+    border-color:#f0cf8a;
+
+    background:rgba(212,170,92,.10);
+
+}
+/*=========================================
+  TARJETAS
+=========================================*/
+
+.tarjetas{
+
+    position:absolute;
+    inset:0;
+    z-index:20;
+    pointer-events:none;
+
+}
+
+.lado{
+
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+    pointer-events:auto;
+
+}
+
+.lado.izquierdo{
+
+    left:120px;
+    top:220px;
+
+}
+
+.lado.derecho{
+
+    right:120px;
+    top:220px;
+
+}
+
+.card{
+
+    width:500px;
+
+    padding:28px 32px;
+
+    border-radius:20px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:rgba(12,9,7,.38);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(212,170,92,.28);
+
+    transition:.35s;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.35);
+
+}
+
+
+/*=========================================
+  CABECERA TARJETA
+=========================================*/
+
+.card-header{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:18px;
+
+}
+
+.card-icon{
+
+    width:44px;
+    height:44px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border:1px solid rgba(212,170,92,.55);
+    border-radius:50%;
+
+    color:#D6A84D;
+
+}
+
+.card-icon svg{
+
+    width:22px;
+    height:22px;
+
+    stroke-width:1.8;
+
+}
+
+.card-header h3{
+
+    margin:0;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:2.15rem;
+    font-weight:600;
+
+    color:#E1B96A;
+
+}
+
+.card p{
+
+    margin:0;
+
+    font-family:Inter,sans-serif;
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+}
+
+
+/*=========================================
+  HOVER
+=========================================*/
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d8b36d;
+
+    box-shadow:
+        0 0 25px rgba(200,154,82,.18),
+        0 20px 45px rgba(0,0,0,.45);
+
+}
+
+.card:hover .card-icon{
+
+    border-color:#d8b36d;
+
+    box-shadow:0 0 18px rgba(212,170,92,.35);
+
+}
+
+.card:hover .card-icon svg{
+
+    transform:scale(1.08);
+
+}
+/*=========================================
+  FRASE CENTRAL
+=========================================*/
+
+.autor-intro{
+
+    position:absolute;
+
+    top:235px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:760px;
+
+    text-align:center;
+
+    z-index:25;
+
+}
+
+.autor-intro h2{
+
+    margin:0;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2.35rem;
+
+    font-weight:500;
+
+    line-height:1.25;
+
+    color:#f2efe9;
+
+}
+
+.intro-line{
+
+    width:90px;
+
+    height:2px;
+
+    margin:26px auto;
+
+    background:#c89a52;
+
+}
+
+/*=========================================
+  CITA INFERIOR
+=========================================*/
+
+.autor-cita{
+
+    position:absolute;
+
+    left:50%;
+    bottom:55px;
+
+    transform:translateX(-50%);
+
+    width:720px;
+    max-width:90%;
+
+    text-align:center;
+
+    z-index:30;
+
+}
+
+.autor-linea{
+
+    width:280px;
+    height:1px;
+
+    margin:0 auto 18px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(225,185,106,.35),
+        rgba(225,185,106,.95),
+        rgba(225,185,106,.35),
+        transparent
+    );
+
+}
+
+.autor-rol{
+
+    display:block;
+
+    margin-bottom:22px;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:.72rem;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#c89a52;
+
+}
+
+.autor-cita h2{
+
+    margin:0;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2.15rem;
+
+    font-weight:500;
+
+    line-height:1.35;
+
+    color:#f3efe8;
+
+    text-shadow:0 4px 18px rgba(0,0,0,.55);
+
+}
+
+.autor-cita p{
+
+    margin-top:22px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.35rem;
+
+    font-style:italic;
+
+    font-weight:400;
+
+    line-height:1.5;
+
+    color:rgba(255,255,255,.78);
+
+    letter-spacing:.3px;
+
+    max-width:700px;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    text-shadow:0 2px 12px rgba(0,0,0,.45);
+
+}
+/*=========================================
+  POLVO DORADO
+=========================================*/
+
+#dust{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:999;
+    opacity:.85;
+}
