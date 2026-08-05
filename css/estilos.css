@@ -869,19 +869,24 @@ backdrop-filter: blur(4px);
     /* MENÚ MÓVIL */
 
     .navbar-collapse{
-        position:absolute;
-        top:100%;
+        position:fixed !important;
+        top:78px;
         left:0;
+        right:0;
         width:100%;
-        background:rgba(10,10,10,.98);
-        border-top:1px solid rgba(255,255,255,.08);
+        background:#0d0d0d;
         padding:0;
+        margin:0;
         z-index:9999;
+    }
+
+    .navbar-collapse.show{
+        display:block !important;
     }
 
     .navbar-nav{
         width:100%;
-        display:flex;
+        display:flex !important;
         flex-direction:column;
         align-items:center;
         gap:0;
@@ -889,7 +894,7 @@ backdrop-filter: blur(4px);
         padding:0;
     }
 
-    .nav-item{width:100%;}
+    .nav-item{width:100%;margin:0;}
 
     .nav-link{
         display:block;
