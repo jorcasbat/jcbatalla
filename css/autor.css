@@ -85,546 +85,63 @@ body{
    RESPONSIVE
 =========================== */
 
-@media(max-width:768px){
-
-    .hero{
-
-        background-position:center top;
-
-    }
-
-}
-/*=========================
-  TÍTULO
-=========================*/
-
-.titulo{
-
-    position:absolute;
-
-    top:55px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:100%;
-
-    text-align:center;
-
-    z-index:10;
-
-}
-
-.titulo h1{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:5.2rem;
-
-    font-weight:600;
-
-    letter-spacing:.18em;
-
-    color:#c89a52;
-
-    text-shadow:
-    0 2px 10px rgba(0,0,0,.5);
-
-}
-
-.titulo p{
-
-    margin-top:14px;
-
-    font-family:Arial,sans-serif;
-
-    font-size:.72rem;
-
-    letter-spacing:.45em;
-
-    color:#d9d0c0;
-
-}
-
-@media(max-width:900px){
-
-.titulo{
-
-    top:35px;
-
-}
-
-.titulo h1{
-
-    font-size:3rem;
-
-    letter-spacing:.08em;
-
-}
-
-.titulo p{
-
-    font-size:.62rem;
-
-    letter-spacing:.22em;
-
-}
-
-}/* ==========================
-   TÍTULO
-========================== */
-
-.titulo{
-    position:absolute;
-    top:100px;
-    left:50%;
-    transform:translateX(-50%);
-    text-align:center;
-    z-index:50;
-    width:100%;
-    pointer-events:none;
-}
-
-.titulo h1{
-
-    font-family:"Cormorant Garamond", serif;
-    font-size:5.8rem;
-    font-weight:600;
-    letter-spacing:.22em;
-
-    color:#E1B96A;
-
-    text-shadow:
-0 2px 2px rgba(0,0,0,.95),
-0 8px 30px rgba(0,0,0,.75);
-
-}
-
-.titulo p{
-
-    color:#e7e5df;
-    letter-spacing:.45em;
-    font-size:1.50rem;
-
-    text-shadow:
-        0 2px 6px rgba(0,0,0,.8);
-
-}
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:280px;
-
-    background:linear-gradient(
-        to bottom,
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.18),
-        transparent
-    );
-
-    z-index:1;
-
-}
-/*=========================================
-  TARJETAS
-=========================================*/
-
-.tarjetas{
-
-    position:absolute;
-    inset:0;
-    z-index:20;
-    pointer-events:none;
-
-}
-
-.lado{
-
-    position:absolute;
-    display:flex;
-    flex-direction:column;
-    gap:26px;
-    pointer-events:auto;
-
-}
-
-.lado.izquierdo{
-
-    left:120px;
-    top:220px;
-
-}
-
-.lado.derecho{
-
-    right:120px;
-    top:220px;
-
-}
-
-.card{
-
-    width:500px;
-
-    padding:28px 32px;
-
-    border-radius:20px;
-
-    text-decoration:none;
-
-    color:white;
-
-    background:rgba(12,9,7,.38);
-
-    backdrop-filter:blur(10px);
-
-    border:1px solid rgba(212,170,92,.28);
-
-    transition:.35s;
-
-    box-shadow:
-        0 18px 40px rgba(0,0,0,.35);
-
-}
-
-
-/*=========================================
-  CABECERA TARJETA
-=========================================*/
-
-.card-header{
-
-    display:flex;
-    align-items:center;
-    gap:18px;
-    margin-bottom:18px;
-
-}
-
-.card-icon{
-
-    width:44px;
-    height:44px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    flex-shrink:0;
-
-    border:1px solid rgba(212,170,92,.55);
-    border-radius:50%;
-
-    color:#D6A84D;
-
-}
-
-.card-icon svg{
-
-    width:22px;
-    height:22px;
-
-    stroke-width:1.8;
-
-}
-
-.card-header h3{
-
-    margin:0;
-
-    font-family:"Cormorant Garamond",serif;
-    font-size:2.15rem;
-    font-weight:600;
-
-    color:#E1B96A;
-
-}
-
-.card p{
-
-    margin:0;
-
-    font-family:Inter,sans-serif;
-
-    color:#d8d8d8;
-
-    line-height:1.8;
-
-    font-size:1rem;
-
-}
-
-
-/*=========================================
-  HOVER
-=========================================*/
-
-.card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#d8b36d;
-
-    box-shadow:
-        0 0 25px rgba(200,154,82,.18),
-        0 20px 45px rgba(0,0,0,.45);
-
-}
-
-.card:hover .card-icon{
-
-    border-color:#d8b36d;
-
-    box-shadow:0 0 18px rgba(212,170,92,.35);
-
-}
-
-.card:hover .card-icon svg{
-
-    transform:scale(1.08);
-
-}
-/*=========================================
-  FRASE CENTRAL
-=========================================*/
-
-.autor-intro{
-
-    position:absolute;
-
-    top:235px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:760px;
-
-    text-align:center;
-
-    z-index:25;
-
-}
-
-.autor-intro h2{
-
-    margin:0;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:2.35rem;
-
-    font-weight:500;
-
-    line-height:1.25;
-
-    color:#f2efe9;
-
-}
-
-.intro-line{
-
-    width:90px;
-
-    height:2px;
-
-    margin:26px auto;
-
-    background:#c89a52;
-
-}
-
-/*=========================================
-  CITA INFERIOR
-=========================================*/
-
-.autor-cita{
-
-    position:absolute;
-
-    left:50%;
-    bottom:55px;
-
-    transform:translateX(-50%);
-
-    width:720px;
-    max-width:90%;
-
-    text-align:center;
-
-    z-index:30;
-
-}
-
-.autor-linea{
-
-    width:280px;
-    height:1px;
-
-    margin:0 auto 18px;
-
-    background:linear-gradient(
-        to right,
-        transparent,
-        rgba(225,185,106,.35),
-        rgba(225,185,106,.95),
-        rgba(225,185,106,.35),
-        transparent
-    );
-
-}
-
-.autor-rol{
-
-    display:block;
-
-    margin-bottom:22px;
-
-    font-family:"Inter",sans-serif;
-
-    font-size:.72rem;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
-    color:#c89a52;
-
-}
-
-.autor-cita h2{
-
-    margin:0;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:2.15rem;
-
-    font-weight:500;
-
-    line-height:1.35;
-
-    color:#f3efe8;
-
-    text-shadow:0 4px 18px rgba(0,0,0,.55);
-
-}
-
-.autor-cita p{
-
-    margin-top:22px;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:1.35rem;
-
-    font-style:italic;
-
-    font-weight:400;
-
-    line-height:1.5;
-
-    color:rgba(255,255,255,.78);
-
-    letter-spacing:.3px;
-
-    max-width:700px;
-
-    margin-left:auto;
-    margin-right:auto;
-
-    text-shadow:0 2px 12px rgba(0,0,0,.45);
-
-}
-/*=========================================
-  POLVO DORADO
-=========================================*/
-
-#dust{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:999;
-    opacity:.85;
-}
-/* ==========================================
-   MÓVIL
-========================================== */
-
-
 @media (max-width:768px){
 
-html,body{
-overflow-x:hidden!important;
-}
+html,body{overflow-x:hidden!important;}
 
 .hero{
-height:auto!important;
-min-height:auto!important;
-padding:120px 0 80px!important;
-background-position:center top!important;
+height:auto;
+min-height:auto;
+padding:120px 0 60px;
+background-position:center top;
+display:block;
 }
 
 .titulo{
-position:relative!important;
-top:0!important;
-left:0!important;
-transform:none!important;
-margin:0 0 40px!important;
-text-align:center!important;
-}
-
-.titulo h1{
-font-size:2.7rem!important;
-letter-spacing:.08em!important;
+position:relative;
+top:auto;
+left:auto;
+transform:none;
+margin:0 auto 40px;
+text-align:center;
 }
 
 .tarjetas{
-position:relative!important;
-display:block!important;
-inset:auto!important;
-padding:0 18px!important;
+position:static;
+display:flex;
+flex-direction:column;
+gap:18px;
+padding:0 16px;
 }
 
 .lado,
 .lado.izquierdo,
 .lado.derecho{
-position:relative!important;
-left:auto!important;
-right:auto!important;
-top:auto!important;
-transform:none!important;
-display:flex!important;
-flex-direction:column!important;
-gap:18px!important;
-width:100%!important;
-margin:0 0 18px!important;
+position:static!important;
+display:flex;
+flex-direction:column;
+gap:18px;
+width:100%;
 }
 
 .card{
-width:100%!important;
-max-width:420px!important;
-margin:0 auto 18px!important;
-padding:22px!important;
+width:100%;
+max-width:none;
+margin:0;
+}
+
+.autor-intro{
+display:none;
 }
 
 .autor-cita{
-position:relative!important;
-left:auto!important;
-bottom:auto!important;
-transform:none!important;
-width:100%!important;
-max-width:420px!important;
-margin:50px auto!important;
-padding:0 20px!important;
+position:static;
+transform:none;
+width:auto;
+max-width:none;
+margin:40px 16px;
+padding:0;
+text-align:center;
 }
 
 }
