@@ -783,12 +783,12 @@ backdrop-filter: blur(4px);
 
     .hero-text{
 
-        max-width:255px;
-        margin-left:4px;
-        margin-right:18px;
-        transform:translateY(-90px);
+        max-width:260px;
+        margin-left:10px;
+        margin-right:20px;
+        transform:translateY(-40px);
 
-        gap:14px;
+        gap:18px;
 
         align-items:flex-start;
 
@@ -831,8 +831,6 @@ backdrop-filter: blur(4px);
 
         white-space:nowrap;
 
-        position:relative;
-        top:190px;
 
     }
 
