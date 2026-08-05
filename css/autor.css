@@ -114,6 +114,53 @@ body{
 
     z-index:10;
 
+}/* FOTO DEL AUTOR */
+
+.autor-intro{
+
+    position:relative !important;
+
+    top:auto !important;
+    left:auto !important;
+
+    transform:none !important;
+
+    width:100%;
+
+    margin:0 auto 40px;
+
+    padding:0 20px;
+
+    text-align:center;
+
+    z-index:20;
+}
+
+.autor-intro img{
+
+    width:270px;
+
+    max-width:72%;
+
+    display:block;
+
+    margin:0 auto 25px;
+}
+
+.autor-intro h2{
+
+    font-size:1.9rem;
+
+    line-height:1.3;
+
+    margin-top:18px;
+}
+
+.intro-line{
+
+    width:120px;
+
+    margin:18px auto;
 }
 
 .titulo h1{
@@ -622,20 +669,18 @@ body{
 
 .autor-cita{
 
-    position:absolute;
+    position:relative;
 
-    left:50%;
-    bottom:55px;
+    left:auto;
+    bottom:auto;
 
-    transform:translateX(-50%);
+    transform:none;
 
-    width:720px;
-    max-width:90%;
+    width:90%;
+
+    margin:0 auto 45px;
 
     text-align:center;
-
-    z-index:30;
-
 }
 
 .autor-linea{
