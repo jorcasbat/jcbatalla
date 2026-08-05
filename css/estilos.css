@@ -928,16 +928,5 @@ backdrop-filter: blur(4px);
     }
 
 }
-@media (max-width:768px){
-
-    .navbar-collapse{
-        display:none;
-        width:100%;
-        background:#0d0d0d;
-    }
-
-    .navbar-collapse.show{
-        display:block;
-    }
 
 }
