@@ -735,7 +735,9 @@ body{
 ========================================== */
 
 .hero-mobile{
-    display:none;
+    display:block !important;
+    background:red;
+    min-height:400px;
 }
 
 .hero-mobile img{
@@ -752,12 +754,22 @@ body{
     }
 
     .hero{
+
     background:none !important;
     background-image:none !important;
+
     min-height:auto !important;
     height:auto !important;
+
     overflow:visible !important;
+
     padding:90px 0 60px !important;
+
+}
+.hero::before,
+.hero::after{
+    display:none !important;
+    content:none !important;
 }
 
     .titulo{
