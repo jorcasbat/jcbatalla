@@ -892,3 +892,57 @@ backdrop-filter: blur(4px);
 }
 
 }
+
+
+/* ===== FIX NAVBAR MÓVIL ===== */
+@media (min-width:992px){
+  .navbar-collapse{
+    display:flex !important;
+    justify-content:flex-end;
+    flex-grow:1;
+  }
+  .navbar-nav{
+    display:flex;
+    align-items:center;
+    gap:34px;
+    margin-left:auto;
+  }
+}
+
+@media (max-width:991.98px){
+
+  .navbar-toggler{
+    display:block !important;
+    margin-left:auto;
+  }
+
+  .navbar-collapse{
+    display:none;
+    width:100%;
+    margin-top:15px;
+  }
+
+  .navbar-collapse.show{
+    display:block !important;
+  }
+
+  .navbar-nav{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+    margin:15px 0 0;
+  }
+
+  .brand-type{
+    display:none;
+  }
+
+  .brand-divider{
+    display:none;
+  }
+
+  .main-container{
+    flex-wrap:wrap;
+  }
+}
