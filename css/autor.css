@@ -884,3 +884,34 @@ body{
     }
 
 }
+
+
+/* ===== FIX CHATGPT MOVIL ===== */
+@media (max-width:768px){
+
+.lado.izquierdo,
+.lado.derecho{
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+    transform:none !important;
+    width:100% !important;
+}
+
+.tarjetas{
+    position:relative !important;
+    inset:auto !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    width:100% !important;
+    padding:0 18px !important;
+}
+
+.card{
+    width:100% !important;
+    max-width:420px !important;
+    margin:0 auto !important;
+}
+
+}
