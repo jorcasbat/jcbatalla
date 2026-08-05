@@ -869,38 +869,31 @@ backdrop-filter: blur(4px);
     /* MENÚ MÓVIL */
 
     .navbar-collapse{
-        position:fixed !important;
-        top:78px;
-        left:0;
-        right:0;
+        position: static !important;
         width:100%;
+        margin-top:12px;
         background:#0d0d0d;
-        padding:0;
-        margin:0;
-        z-index:9999;
-    }
-
-    .navbar-collapse.show{
-        display:block !important;
     }
 
     .navbar-nav{
-        width:100%;
-        display:flex !important;
+        display:flex;
         flex-direction:column;
         align-items:center;
         gap:0;
+        width:100%;
         margin:0;
         padding:0;
     }
 
-    .nav-item{width:100%;margin:0;}
+    .nav-item{
+        width:100%;
+    }
 
     .nav-link{
         display:block;
         width:100%;
-        padding:18px 20px;
         text-align:center;
+        padding:16px 0;
         border-bottom:1px solid rgba(255,255,255,.08);
     }
 
@@ -908,8 +901,10 @@ backdrop-filter: blur(4px);
         border-bottom:none;
     }
 
+}
 
-    @media (max-width:375px){
+@media (max-width:375px){
+
 
     .navbar-brand{
         gap:8px;
